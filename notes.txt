@@ -1,0 +1,66 @@
+imperative -> Tu (sviluppatore) devi definire ogni dettaglio dell'implementazione
+
+dichiarativa molto più semplice e concisa!
+
+The beauty of Functional Interfaces is when they are combined with Streams, allowing you to write declarative code.
+
+
+#### java.utils.function package
+qui ci sono tutti gli elementi necessari per il functional programming (lambda, stream predicate ecc..)
+
+
+
+### FUNCTION class
+nuovo metodo per la definizione di funzioni
+per usarla  * funcName.apply(input) *
+
+### Chaining Func
+basta usare il metodo .andThen()
+
+#### BI Function
+2 input --> 1 output
+
+### Consumer
+una funzione con un input e nessun return. (VOID FUNC)
+per usarla * consumerName.accept(input) *
+
+#### BiConsumer
+la versione "BI" del consumer (2 input)
+
+#### Predicate
+L'equivalente di una funzione che restituisce un boolean
+per usarlo * predicateName.test(input) *
+
+è possibile combinarli insieme come con le funzioni tramite
+.and() oppure .or() .negate()
+
+-> Ci sono anche i BIPredicate ..
+
+##### Supplier
+Una funzione senza input, con return "fisso".
+per usarla * consumerName.accept(input) *
+
+#############################
+
+#### Streams!
+.stream(). => guarda quanti metodi!! (e utilizzano tutti le interfacce definite precedentemente...)
+Ha tutto senso se finalizzato all'utilizzo degli stream!
+
+#### OPTIONALS
+Per risolvere problemi di "null pointers" con la functional programming
+
+Per gli Optionals sono molto interessanti .orElse .orElseGet .orElseThrow
+
+#### COMBINATOR pattern
+.... guarda il codice..
+
+##### Callbacks (JS likes)
+è possibile passare funzioni come parametri
+
+NOTA. i generics delle Lambda NON devono essere primitivi (NO int ma Integer)
+
+NOTA. Una funzione che prende in input una funzione o restituisce una funzione viene detta
+Higher Order Function
+
+NOTA. Nella programmazione funzionale ogni funzione deve essere autoportante.
+Nessuna dipendenza da elementi esterni
